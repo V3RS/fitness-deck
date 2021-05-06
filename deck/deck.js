@@ -3,6 +3,7 @@ const Card = require("./card");
 class Deck {
   constructor() {
     this.cards = [];
+    this.createDeck();
   }
 
   createDeck() {
@@ -38,13 +39,21 @@ class Deck {
   }
 
   deal() {
-    if (this.cards.length) return this.cards.pop();
+    return this.cardCount() ? this.cards.pop() : null;
+  }
+
+  peak() {
+    return this.cardCount() ? this.cards[this.cards.length - 1] : null;
+  }
+
+  // create a function to return this.cards.length
+  cardCount() {
+    return this.cards.length;
   }
 }
 
 //! To test all functionality for the class
 // const d = new Deck();
-// d.createDeck();
 // console.log("-------------");
 // console.log(d.cards);
 // d.shuffle();
@@ -53,3 +62,6 @@ class Deck {
 // console.log(d.cards.length);
 // console.log(d.deal());
 // console.log(d.cards.length);
+// console.log(d.peak());
+
+module.exports = Deck;
