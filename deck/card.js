@@ -32,6 +32,7 @@ class Deck {
   }
 
   shuffle() {
+    // shuffles the deck by creating a temp variable and getting a random number for the new index
     for (let i = this.cards.length - 1; i > 0; i--) {
       let rand = Math.floor(Math.random() * (i + 1));
       let temp = this.cards[i];
@@ -49,8 +50,10 @@ class Deck {
 //! To test all functionality for the class
 // const d = new Deck();
 // d.createDeck();
+// console.log("-------------");
 // console.log(d.cards);
 // d.shuffle();
+// console.log("-------------");
 // console.log(d.cards);
 // console.log(d.cards.length);
 // console.log(d.deal());
