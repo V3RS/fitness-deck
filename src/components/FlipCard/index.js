@@ -11,9 +11,10 @@ export default function FlipCard() {
           <img src={cardBack} alt="cardBack" id="card__back" />
         </div>
         <div class="flip-card-back">
-          <h1>John Doe</h1>
-          <p>Architect & Engineer</p>
-          <p>We love that guy</p>
+          <h1>Main Menu</h1>
+          <p>Option 1</p>
+          <p>Option 2</p>
+          <p>Option 3</p>
         </div>
       </div>
     </div>
