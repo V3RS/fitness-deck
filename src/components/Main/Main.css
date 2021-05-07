@@ -49,6 +49,9 @@
 
 .deck:hover {
   cursor: pointer;
+  transition: bottom 0.3s ease-in-out;
+  /* transform: scale(0.8); */
+  bottom: 2%;
 }
 
 .card__page__btns {
