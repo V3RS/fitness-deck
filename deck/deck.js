@@ -6,6 +6,10 @@ class Deck {
     this.createDeck();
   }
 
+  getDeck() {
+    return this.cards;
+  }
+
   createDeck() {
     const suits = ["clubs", "hearts", "spades", "diamonds"];
     // ace will be high
