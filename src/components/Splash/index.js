@@ -1,10 +1,14 @@
 import React from "react";
 import "./Splash.css";
+import FlipCard from "../FlipCard";
 
 export default function Splash() {
   return (
     <div>
       <div>TEST SPLASH</div>
+      <div className="flip__card__c">
+        <FlipCard />
+      </div>
     </div>
   );
 }

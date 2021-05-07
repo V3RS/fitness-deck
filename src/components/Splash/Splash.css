@@ -1,0 +1,6 @@
+#splash__deck {
+  position: absolute;
+  transform: scale(2);
+  top: 30vh;
+  left: 40vw;
+}
