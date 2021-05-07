@@ -4,8 +4,8 @@ import FlipCard from "../FlipCard";
 
 export default function Splash() {
   return (
-    <div>
-      <div>TEST SPLASH</div>
+    <div className="splash__c">
+      {/* <div>TEST SPLASH</div> */}
       <div className="flip__card__c">
         <FlipCard />
       </div>

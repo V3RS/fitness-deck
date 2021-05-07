@@ -1,6 +1,8 @@
-#splash__deck {
-  position: absolute;
-  transform: scale(2);
-  top: 30vh;
-  left: 40vw;
+.splash__c {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -3,12 +3,12 @@
   width: 400px;
   height: 550px;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
-  border-radius: 8px;
   border: none;
+  border-radius: 8px;
 }
 #card__back {
   width: 400px;
-  border: 2px solid var(--green);
+  border: 5px solid var(--green);
   height: 550px;
   border-radius: 8px;
 }
