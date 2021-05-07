@@ -9,3 +9,7 @@ body {
   --lightgreen: #1ed760;
   --dark: #141414;
 }
+
+button:hover {
+  cursor: pointer;
+}
