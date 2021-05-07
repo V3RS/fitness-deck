@@ -14,6 +14,7 @@ function App() {
         <Route path="/fit" exact={true}>
           <Main />
         </Route>
+        <Route path="/card" exact={true}></Route>
       </Switch>
     </BrowserRouter>
   );
