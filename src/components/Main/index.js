@@ -14,7 +14,9 @@ export default function Main() {
         <button>
           <i className="fas fa-play"></i>
         </button>
-        <button>Menu</button>
+        <button>
+          <i className="fas fa-bars"></i>
+        </button>
       </div>
     </div>
   );
