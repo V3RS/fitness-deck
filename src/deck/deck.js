@@ -22,7 +22,7 @@ class Deck {
           new Card(
             suits[i],
             values[j],
-            `/deck/card-svgs/${values[j]}_of_${suits[i]}.svg`
+            `/card-svgs/${values[j]}_of_${suits[i]}.svg`
           )
         );
       }
