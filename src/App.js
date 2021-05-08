@@ -1,10 +1,22 @@
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+
+import Main from "./components/Main";
+import Splash from "./components/Splash";
 import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Card Game</h1>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" exact={true}>
+          <Splash />
+        </Route>
+        <Route path="/fit" exact={true}>
+          <Main />
+        </Route>
+        <Route path="/card" exact={true}></Route>
+      </Switch>
+    </BrowserRouter>
   );
 }
 

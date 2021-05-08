@@ -1,6 +1,17 @@
 body {
   margin: 0;
+  background: var(--dark);
+  color: var(--green);
+  background: url("./fitbg.jpg") no-repeat center center fixed;
+  font-family: sans-serif;
 }
 
-code {
+:root {
+  --green: #1db954;
+  --lightgreen: #1ed760;
+  --dark: #363636;
+}
+
+button:hover {
+  cursor: pointer;
 }

@@ -1,0 +1,84 @@
+.card__page__c {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__title {
+  position: absolute;
+  top: 5%;
+  font-size: 7rem;
+}
+.card__timer {
+  position: absolute;
+  right: 5%;
+  height: 10rem;
+  width: 10rem;
+  font-size: 7rem;
+  border: 15px solid var(--green);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  position: absolute;
+  /* bottom: 45%; */
+  top: 3%;
+  left: 2%;
+}
+.deck {
+  position: absolute;
+  bottom: 1%;
+  left: 1%;
+  border-radius: 8px;
+  transform: scale(0.75);
+  border: 2px solid var(--green);
+}
+
+.exercise {
+  border-radius: 8px;
+  border: 2px solid var(--green);
+  height: 50vh;
+  width: 50vw;
+}
+
+.deck:hover {
+  cursor: pointer;
+  transition: bottom 0.3s ease-in-out;
+  /* transform: scale(0.8); */
+  bottom: 2%;
+}
+
+.card__page__btns {
+  position: absolute;
+  bottom: 5%;
+}
+
+.card__page__btns > button {
+  background-color: var(--green);
+  border: none;
+  border-radius: 100%;
+  font-size: 2.5rem;
+  margin-left: 2.5vw;
+  color: white;
+  width: 5rem;
+  height: 5rem;
+}
+
+.draw__btn {
+  height: 5rem;
+  position: relative;
+  top: 1.75rem;
+}
+.draw__btn:hover {
+  cursor: pointer;
+}
+
+.fa-play-circle {
+  font-size: 7rem;
+}
