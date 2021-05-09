@@ -12,9 +12,9 @@ export default function Main({ deck, setDeck }) {
       case "clubs":
         return { exercise: "Jump Squats", gif: "/exercises/jump-squat.gif" };
       case "hearts":
-        return { exercise: "Push Ups", gif: "/exercises/jump-squat.gif" };
+        return { exercise: "T Push Ups", gif: "/exercises/t-push-ups.gif" };
       case "spades":
-        return { exercise: "Jumping Jacks", gif: "/exercises/v-ups.gif" };
+        return { exercise: "Leg Raises", gif: "/exercises/leg-raise.gif" };
       case "diamonds":
         return { exercise: "V Ups", gif: "/exercises/v-ups.gif" };
     }
