@@ -12,6 +12,12 @@
   top: 5%;
   font-size: 7rem;
 }
+.cards__left {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  font-size: 4rem;
+}
 .card__timer {
   position: absolute;
   right: 5%;
@@ -40,6 +46,19 @@
   transform: scale(0.75);
   border: 2px solid var(--green);
 }
+
+/* .deck__transition {
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  transform: scale(0.99);
+  bottom: 64.5%;
+}
+
+.deck__display {
+  transition: all 0.5s ease-in-out;
+  display: none;
+} */
+
 .deck2 {
   z-index: -10;
 }
