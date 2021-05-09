@@ -1,41 +1,59 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Main.css";
 import cardBack from "../../deck/card-back.png";
-import jumpsquat from "../../exercises/jump-squat.gif";
 import draw from "./card-draw.svg";
-import Deck from "../../deck/deck";
 
-export default function Main() {
-  // let d;
-  const d = new Deck();
-  d.shuffle();
-
-  // useEffect(() => {
-  //   d = new Deck();
-  //   d.shuffle();
-  // }, []);
-
-  const [deck, setDeck] = useState(d);
+export default function Main({ deck, setDeck }) {
   const [card, setCard] = useState(deck[deck.cards.length - 1]);
-  // console.log(card.image);
 
-  // console.log(deck);
+  // screen to gif
+  const bodyweight = (card) => {
+    switch (card?.suit) {
+      case "clubs":
+        return { exercise: "Jump Squats", gif: "/exercises/jump-squat.gif" };
+      case "hearts":
+        return { exercise: "Push Ups", gif: "/exercises/jump-squat.gif" };
+      case "spades":
+        return { exercise: "Jumping Jacks", gif: "/exercises/v-ups.gif" };
+      case "diamonds":
+        return { exercise: "V Ups", gif: "/exercises/v-ups.gif" };
+    }
+  };
+  // const bodyweightGif = (card) => {
+  //   switch (card?.suit) {
+  //     case "clubs":
+  //       return "/exercises/jump-squat.gif";
+  //     case "hearts":
+  //       return "/exercises/jump-squat.gif";
+  //     case "spades":
+  //       return "/exercises/v-ups.gif";
+  //     case "diamonds":
+  //       return "/exercises/v-ups.gif";
+  //   }
+  // };
 
   return (
     <div className="card__page__c">
-      <div className="card__title"> 2 Jump Squats</div>
+      <div className="card__title">
+        {" "}
+        {card?.value} {bodyweight(card)?.exercise}
+      </div>
       <img src={card?.image} className="card" />
-      <img src={jumpsquat} className="exercise" />
-      <img
-        src={cardBack}
-        className="deck"
-        onClick={() => {
-          setCard(deck.deal());
-          setDeck(deck);
-          // console.log(deck);
-        }}
-      />
-      <img src={cardBack} className="deck2" />
+      {card && <img src={bodyweight(card)?.gif} className="exercise" />}
+      {deck.cards.length && (
+        <span>
+          <img
+            src={cardBack}
+            className="deck"
+            onClick={() => {
+              setCard(deck.deal());
+              setDeck(deck);
+              // console.log(deck);
+            }}
+          />
+          {deck.cards.length > 1 && <img src={cardBack} className="deck2" />}
+        </span>
+      )}
 
       <div className="card__timer"> 50 </div>
 
