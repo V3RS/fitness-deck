@@ -15,7 +15,7 @@
   font-size: 1.75rem;
   font-weight: bold;
   border-radius: 30px;
-  background-color: var(--green);
+  background-color: var(--blue);
   border: none;
   color: whitesmoke;
   height: 40px;
@@ -65,20 +65,19 @@
 }
 
 .deck,
-.deck2,
-.deck3 {
+.deck2 {
   position: absolute;
   bottom: 1%;
   left: 1%;
   border-radius: 8px;
   transform: scale(0.75);
-  border: 2px solid var(--green);
+  border: 2px solid var(--blue);
   box-shadow: 10px 10px 10px 10px black;
 }
 
 .deck__transition {
   cursor: pointer;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.75s ease-in-out;
   transform: scale(0.99);
   bottom: 64.5%;
 }
@@ -90,7 +89,7 @@
 
 .exercise {
   border-radius: 8px;
-  border: 2px solid var(--green);
+  border: 2px solid var(--blue);
   /* height: 50vh;
   width: 50vw; */
   width: 400px;
@@ -98,7 +97,7 @@
   box-shadow: 10px 10px 10px 10px black;
 }
 
-.deck:hover {
+.deck__hover:hover {
   cursor: pointer;
   transition: bottom 0.3s ease-in-out;
   /* transform: scale(0.8); */

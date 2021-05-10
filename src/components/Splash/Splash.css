@@ -17,7 +17,7 @@
   right: 0;
   height: 100vh;
   width: 50vw;
-  background: url("../../fitbg.jpg") no-repeat left center fixed;
+  background: url("../../fitbg.jpg") no-repeat bottom right fixed;
 }
 
 .splash__left__c {
@@ -62,7 +62,7 @@
   font-size: 1.75rem;
   font-weight: bold;
   border-radius: 30px;
-  background-color: var(--green);
+  background-color: var(--blue);
   color: whitesmoke;
   height: 70px;
   width: 300px;

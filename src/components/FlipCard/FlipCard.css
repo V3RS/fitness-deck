@@ -8,7 +8,7 @@
 }
 #card__back {
   width: 400px;
-  border: 5px solid var(--green);
+  border: 5px solid var(--blue);
   height: 550px;
   border-radius: 8px;
 }
@@ -39,7 +39,7 @@
   background-color: var(--dark);
   transform: rotateY(180deg);
   border-radius: 8px;
-  border: 5px solid var(--green);
+  border: 5px solid var(--blue);
 }
 
 .deck__options {
@@ -47,7 +47,7 @@
   margin-left: 6.5rem;
   font-size: 1rem;
   border-radius: 30px;
-  background-color: var(--green);
+  background-color: var(--blue);
   border: none;
   color: whitesmoke;
   height: 50px;
