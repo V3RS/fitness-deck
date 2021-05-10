@@ -10,15 +10,21 @@ function App() {
   d.shuffle();
 
   const [deck, setDeck] = useState(d);
+  const [level, setLevel] = useState(1);
 
   return (
     <BrowserRouter>
       <Switch>
         <Route path="/" exact={true}>
-          <Splash />
+          <Splash level={level} setLevel={setLevel} />
         </Route>
-        <Route path="/fit" exact={true}>
-          <Main deck={deck} setDeck={setDeck} />
+        <Route path="/play" exact={true}>
+          <Main
+            deck={deck}
+            setDeck={setDeck}
+            level={level}
+            setLevel={setLevel}
+          />
         </Route>
         <Route path="/card" exact={true}></Route>
       </Switch>

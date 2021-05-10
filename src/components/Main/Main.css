@@ -14,11 +14,12 @@
 }
 .cards__left {
   position: absolute;
-  bottom: 5%;
-  right: 5%;
-  font-size: 4rem;
+  /* bottom: 40%; */
+  right: 3%;
+  font-size: 3.5rem;
 }
-.card__timer {
+
+/* .card__timer {
   position: absolute;
   right: 5%;
   height: 10rem;
@@ -29,14 +30,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .card {
   position: absolute;
   /* bottom: 45%; */
   top: 3%;
   left: 2%;
+  box-shadow: 10px 10px 10px 10px black;
+  border-radius: 15px;
 }
+
 .deck,
 .deck2 {
   position: absolute;
@@ -45,16 +49,17 @@
   border-radius: 8px;
   transform: scale(0.75);
   border: 2px solid var(--green);
+  box-shadow: 10px 10px 10px 10px black;
 }
 
-/* .deck__transition {
+.deck__transition {
   cursor: pointer;
   transition: all 0.5s ease-in-out;
   transform: scale(0.99);
   bottom: 64.5%;
 }
 
-.deck__display {
+/* .deck__display {
   transition: all 0.5s ease-in-out;
   display: none;
 } */
@@ -66,8 +71,11 @@
 .exercise {
   border-radius: 8px;
   border: 2px solid var(--green);
-  height: 50vh;
-  width: 50vw;
+  /* height: 50vh;
+  width: 50vw; */
+  width: 400px;
+  height: 550px;
+  box-shadow: 10px 10px 10px 10px black;
 }
 
 .deck:hover {

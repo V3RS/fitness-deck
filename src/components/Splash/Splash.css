@@ -5,4 +5,71 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: whitesmoke;
+}
+
+.splash__right__c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  height: 100vh;
+  width: 50vw;
+  background: url("../../fitbg.jpg") no-repeat left center fixed;
+}
+
+.splash__left__c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+  width: 50vw;
+}
+
+.splash__intro {
+  position: absolute;
+  top: 32%;
+  left: -39.5%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #363636;
+}
+.splash__title {
+  position: absolute;
+  top: 35%;
+  left: -40%;
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.splash__description {
+  position: absolute;
+  top: 45%;
+  left: -40%;
+  font-size: 2rem;
+  font-weight: bold;
+  color: gray;
+  width: 40vw;
+}
+
+.meet__the__dev {
+  position: absolute;
+  top: 65%;
+  left: -40%;
+  font-size: 1.75rem;
+  font-weight: bold;
+  border-radius: 30px;
+  background-color: var(--green);
+  color: white;
+  height: 70px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.meet__the__dev:hover {
+  opacity: 0.8;
 }
