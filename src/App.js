@@ -2,8 +2,10 @@ import { useState } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import CardPage from "./components/CardPage";
 import Splash from "./components/Splash";
-import "./App.css";
 import Deck from "./deck/deck";
+import Completed from "./components/Completed";
+
+import "./App.css";
 
 function App() {
   const d = new Deck();
@@ -26,7 +28,9 @@ function App() {
             setLevel={setLevel}
           />
         </Route>
-        <Route path="/card" exact={true}></Route>
+        <Route path="/completed" exact={true}>
+          <Completed level={level} setLevel={setLevel} />
+        </Route>
       </Switch>
     </BrowserRouter>
   );

@@ -25,6 +25,14 @@ export default function CardPage({ deck, setDeck, level, setLevel }) {
     history.push("/");
   };
 
+  const complete = () => {
+    // sets a new deck if the user completes workout
+    const d = new Deck();
+    d.shuffle();
+    setDeck(d);
+    history.push("/completed");
+  };
+
   // function to change the exercise and gif depending on the suit
   const bodyweight = (card) => {
     switch (card?.suit) {
@@ -57,7 +65,9 @@ export default function CardPage({ deck, setDeck, level, setLevel }) {
           {deck.cards.length > 1 && <img src={cardBack} className="deck2" />}
         </span>
       ) : (
-        <button className="complete__btn">Finish Workout</button>
+        <button className="complete__btn" onClick={complete}>
+          Finish Workout
+        </button>
       )}
     </div>
   );
