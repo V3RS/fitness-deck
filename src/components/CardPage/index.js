@@ -4,7 +4,7 @@ import "./CardPage.css";
 import cardBack from "../../deck/card-back.png";
 import Deck from "../../deck/deck";
 
-export default function CardPage({ deck, setDeck, level, setLevel }) {
+export default function CardPage({ deck, setDeck, level, isCore }) {
   const history = useHistory();
   const [card, setCard] = useState(deck[deck.cards.length - 1]);
 
@@ -12,7 +12,8 @@ export default function CardPage({ deck, setDeck, level, setLevel }) {
     document.querySelector(".card")?.classList.add("card__transition");
     document.querySelector(".card__title")?.classList.add("card__transition");
     document.querySelector(".exercise")?.classList.add("card__transition");
-    document.querySelector(".deck3")?.classList.add("deck__transition");
+    document.querySelector(".deck")?.classList.remove("deck__hover");
+    document.querySelector(".deck")?.classList.add("deck__transition");
 
     setTimeout(() => {
       document.querySelector(".card")?.classList.remove("card__transition");
@@ -20,11 +21,12 @@ export default function CardPage({ deck, setDeck, level, setLevel }) {
         .querySelector(".card__title")
         .classList?.remove("card__transition");
       document.querySelector(".exercise")?.classList.remove("card__transition");
-      document.querySelector(".deck3")?.classList.remove("deck__transition");
+      document.querySelector(".deck")?.classList.remove("deck__transition");
+      document.querySelector(".deck")?.classList.add("deck__hover");
       // after the transition effect it will set the next card
       setCard(deck.deal());
       setDeck(deck);
-    }, 500);
+    }, 750);
   };
 
   const leave = (route) => {
@@ -43,7 +45,26 @@ export default function CardPage({ deck, setDeck, level, setLevel }) {
       case "hearts":
         return { exercise: "T Push Ups", gif: "/exercises/t-push-ups.gif" };
       case "spades":
+        return { exercise: "Glute Bridges", gif: "/exercises/bridge.gif" };
+      case "diamonds":
+        return { exercise: "V Ups", gif: "/exercises/v-ups.gif" };
+    }
+  };
+
+  const abs = (card) => {
+    switch (card?.suit) {
+      case "clubs":
         return { exercise: "Leg Raises", gif: "/exercises/leg-raise.gif" };
+      case "hearts":
+        return {
+          exercise: "Oblique Crunches",
+          gif: "/exercises/oblique-crunch.gif",
+        };
+      case "spades":
+        return {
+          exercise: "Russian Twists",
+          gif: "/exercises/russian-twist.gif",
+        };
       case "diamonds":
         return { exercise: "V Ups", gif: "/exercises/v-ups.gif" };
     }
@@ -56,18 +77,23 @@ export default function CardPage({ deck, setDeck, level, setLevel }) {
       </button>
       <div className="card__title">
         {" "}
-        {card && card?.value * level} {bodyweight(card)?.exercise}
+        {card && card?.value * level}{" "}
+        {isCore ? abs(card)?.exercise : bodyweight(card)?.exercise}
       </div>
       <div className="cards__left">Cards Left: {deck.cards.length}</div>
       <img src={card?.image} className="card" />
-      {card && <img src={bodyweight(card)?.gif} className="exercise" />}
+      {card && (
+        <img
+          src={isCore ? abs(card)?.gif : bodyweight(card)?.gif}
+          className="exercise"
+        />
+      )}
       {deck.cards.length > 0 ? (
         <span>
-          <img src={cardBack} className="deck" onClick={draw} />
+          <img src={cardBack} className="deck deck__hover" onClick={draw} />
           {deck.cards.length > 1 && (
             <>
               <img src={cardBack} className="deck2" />
-              <img src={cardBack} className="deck3" />
             </>
           )}
         </span>

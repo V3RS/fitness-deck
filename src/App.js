@@ -14,12 +14,13 @@ function App() {
 
   const [deck, setDeck] = useState(d);
   const [level, setLevel] = useState(1);
+  const [isCore, setIsCore] = useState(false);
 
   return (
     <BrowserRouter>
       <Switch>
         <Route path="/" exact={true}>
-          <Splash level={level} setLevel={setLevel} />
+          <Splash setLevel={setLevel} setIsCore={setIsCore} />
         </Route>
         <Route path="/play" exact={true}>
           <CardPage
@@ -27,13 +28,14 @@ function App() {
             setDeck={setDeck}
             level={level}
             setLevel={setLevel}
+            isCore={isCore}
           />
         </Route>
         <Route path="/completed" exact={true}>
-          <Completed level={level} setLevel={setLevel} />
+          <Completed setLevel={setLevel} setIsCore={setIsCore} />
         </Route>
         <Route path="/instructions" exact={true}>
-          <Instructions level={level} setLevel={setLevel} />
+          <Instructions setLevel={setLevel} setIsCore={setIsCore} />
         </Route>
       </Switch>
     </BrowserRouter>

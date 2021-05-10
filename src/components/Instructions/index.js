@@ -3,13 +3,13 @@ import "./Instructions.css";
 import FlipCard from "../FlipCard";
 import { useHistory } from "react-router";
 
-export default function Instructions({ setLevel }) {
+export default function Instructions({ setLevel, setIsCore }) {
   const history = useHistory();
 
   return (
     //   used same CSS as splash page to hold site consistency
     <div className="splash__c">
-      <button id="back" onClick={() => history.push("/")}>
+      <button className="back" onClick={() => history.push("/")}>
         <i className="fas fa-arrow-left"></i>
       </button>
       <div className="splash__left__c">
@@ -36,7 +36,7 @@ export default function Instructions({ setLevel }) {
       </div>
       <div className="splash__right__c">
         <div className="flip__card__c">
-          <FlipCard setLevel={setLevel} />
+          <FlipCard setLevel={setLevel} setIsCore={setIsCore} />
         </div>
       </div>
     </div>

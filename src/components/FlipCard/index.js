@@ -4,11 +4,12 @@ import cardBack from "../../deck/card-back.png";
 
 import "./FlipCard.css";
 
-export default function FlipCard({ setLevel }) {
+export default function FlipCard({ setLevel, setIsCore }) {
   const history = useHistory();
 
-  const pickDeck = (lvl) => {
+  const pickDeck = (lvl, abs) => {
     setLevel(lvl);
+    setIsCore(abs);
     history.push("/play");
   };
 
@@ -20,23 +21,23 @@ export default function FlipCard({ setLevel }) {
         </div>
         <div class="flip-card-back">
           <h1>Decks</h1>
-          <button className="deck__options" onClick={() => pickDeck(1)}>
+          <button className="deck__options" onClick={() => pickDeck(1, false)}>
             Bodyweight Deck Easy
           </button>
-          <button className="deck__options" onClick={() => pickDeck(2)}>
+          <button className="deck__options" onClick={() => pickDeck(2, false)}>
             Bodyweight Deck Medium
           </button>
-          <button className="deck__options" onClick={() => pickDeck(3)}>
+          <button className="deck__options" onClick={() => pickDeck(3, false)}>
             Bodyweight Deck Hard
           </button>
-          <button className="deck__options" onClick={() => pickDeck(1)}>
-            Stretch Deck Easy
+          <button className="deck__options" onClick={() => pickDeck(1, true)}>
+            Core Deck Easy
           </button>
-          <button className="deck__options" onClick={() => pickDeck(2)}>
-            Stretch Deck Medium
+          <button className="deck__options" onClick={() => pickDeck(2, true)}>
+            Core Deck Medium
           </button>
-          <button className="deck__options" onClick={() => pickDeck(3)}>
-            Stretch Deck Hard
+          <button className="deck__options" onClick={() => pickDeck(3, true)}>
+            Core Deck Hard
           </button>
         </div>
       </div>
