@@ -4,6 +4,7 @@ import CardPage from "./components/CardPage";
 import Splash from "./components/Splash";
 import Deck from "./deck/deck";
 import Completed from "./components/Completed";
+import Instructions from "./components/Instructions";
 
 import "./App.css";
 
@@ -30,6 +31,9 @@ function App() {
         </Route>
         <Route path="/completed" exact={true}>
           <Completed level={level} setLevel={setLevel} />
+        </Route>
+        <Route path="/instructions" exact={true}>
+          <Instructions level={level} setLevel={setLevel} />
         </Route>
       </Switch>
     </BrowserRouter>

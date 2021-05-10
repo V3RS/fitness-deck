@@ -114,31 +114,7 @@
   bottom: 5%;
 }
 
-.card__page__btns {
-  position: absolute;
-  bottom: 5%;
-}
-
-.card__page__btns > button {
-  background-color: var(--green);
-  border: none;
-  border-radius: 100%;
-  font-size: 2.5rem;
-  margin-left: 2.5vw;
-  color: white;
-  width: 5rem;
-  height: 5rem;
-}
-
-.draw__btn {
-  height: 5rem;
-  position: relative;
-  top: 1.75rem;
-}
-.draw__btn:hover {
-  cursor: pointer;
-}
-
-.fa-play-circle {
-  font-size: 7rem;
+#instructions {
+  top: 87%;
+  left: 42%;
 }

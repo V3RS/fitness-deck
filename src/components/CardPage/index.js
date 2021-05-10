@@ -69,6 +69,13 @@ export default function CardPage({ deck, setDeck, level, setLevel }) {
           Finish Workout
         </button>
       )}
+      <button
+        id="instructions"
+        className="meet__the__dev"
+        onClick={() => history.push("/instructions")}
+      >
+        HOW TO PLAY
+      </button>
     </div>
   );
 }

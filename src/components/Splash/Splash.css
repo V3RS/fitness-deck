@@ -69,6 +69,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border: none;
 }
 
 .meet__the__dev:hover {
