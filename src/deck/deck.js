@@ -1,4 +1,4 @@
-const Card = require("./card");
+import Card from "./card";
 
 class Deck {
   constructor() {
@@ -68,4 +68,4 @@ class Deck {
 // console.log(d.cards.length);
 // console.log(d.peak());
 
-module.exports = Deck;
+export default Deck;
