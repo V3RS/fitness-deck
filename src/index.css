@@ -7,13 +7,19 @@ body {
 }
 
 :root {
-  --green: #1db954;
-  --lightgreen: #1ed760;
+  --green: #006aff;
   --dark: #363636;
 }
 
 button:hover {
   cursor: pointer;
+}
+button {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
 }
 a:hover {
   cursor: pointer;

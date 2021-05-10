@@ -7,10 +7,33 @@
   align-items: center;
 }
 
+.quit__btn,
+.complete__btn {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-size: 1.75rem;
+  font-weight: bold;
+  border-radius: 30px;
+  background-color: var(--green);
+  border: none;
+  color: whitesmoke;
+  height: 40px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quit__btn:hover,
+.complete__btn:hover {
+  opacity: 0.8;
+}
+
 .card__title {
   position: absolute;
   top: 5%;
-  font-size: 7rem;
+  font-size: 6rem;
 }
 .cards__left {
   position: absolute;
@@ -19,18 +42,11 @@
   font-size: 3.5rem;
 }
 
-/* .card__timer {
-  position: absolute;
-  right: 5%;
-  height: 10rem;
-  width: 10rem;
-  font-size: 7rem;
-  border: 15px solid var(--green);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
+.complete__btn {
+  top: 55%;
+  width: 250px;
+  height: 50px;
+}
 
 .card {
   position: absolute;
@@ -41,8 +57,16 @@
   border-radius: 15px;
 }
 
+.card,
+.exercise,
+.card__title {
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
 .deck,
-.deck2 {
+.deck2,
+.deck3 {
   position: absolute;
   bottom: 1%;
   left: 1%;
@@ -59,12 +83,8 @@
   bottom: 64.5%;
 }
 
-/* .deck__display {
-  transition: all 0.5s ease-in-out;
-  display: none;
-} */
-
-.deck2 {
+.deck2,
+.deck3 {
   z-index: -10;
 }
 
@@ -85,31 +105,12 @@
   bottom: 5%;
 }
 
-.card__page__btns {
-  position: absolute;
-  bottom: 5%;
+#instructions {
+  top: 87%;
+  left: 42%;
 }
 
-.card__page__btns > button {
-  background-color: var(--green);
-  border: none;
-  border-radius: 100%;
-  font-size: 2.5rem;
-  margin-left: 2.5vw;
-  color: white;
-  width: 5rem;
-  height: 5rem;
-}
-
-.draw__btn {
-  height: 5rem;
-  position: relative;
-  top: 1.75rem;
-}
-.draw__btn:hover {
-  cursor: pointer;
-}
-
-.fa-play-circle {
-  font-size: 7rem;
+.card__transition {
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
 }
