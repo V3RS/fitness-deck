@@ -48,19 +48,6 @@
   height: 50px;
 }
 
-/* .card__timer {
-  position: absolute;
-  right: 5%;
-  height: 10rem;
-  width: 10rem;
-  font-size: 7rem;
-  border: 15px solid var(--green);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
 .card {
   position: absolute;
   /* bottom: 45%; */
@@ -70,8 +57,16 @@
   border-radius: 15px;
 }
 
+.card,
+.exercise,
+.card__title {
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
 .deck,
-.deck2 {
+.deck2,
+.deck3 {
   position: absolute;
   bottom: 1%;
   left: 1%;
@@ -88,12 +83,8 @@
   bottom: 64.5%;
 }
 
-/* .deck__display {
-  transition: all 0.5s ease-in-out;
-  display: none;
-} */
-
-.deck2 {
+.deck2,
+.deck3 {
   z-index: -10;
 }
 
@@ -117,4 +108,9 @@
 #instructions {
   top: 87%;
   left: 42%;
+}
+
+.card__transition {
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
 }

@@ -9,28 +9,30 @@ export default function CardPage({ deck, setDeck, level, setLevel }) {
   const [card, setCard] = useState(deck[deck.cards.length - 1]);
 
   const draw = () => {
-    setCard(deck.deal());
-    setDeck(deck);
-    // document.querySelector(".deck").classList.add("deck__transition");
-    // setTimeout(() => {
-    //   document.querySelector(".deck").classList.add("deck__display");
-    // }, 3000);
+    document.querySelector(".card")?.classList.add("card__transition");
+    document.querySelector(".card__title")?.classList.add("card__transition");
+    document.querySelector(".exercise")?.classList.add("card__transition");
+    document.querySelector(".deck3")?.classList.add("deck__transition");
+
+    setTimeout(() => {
+      document.querySelector(".card")?.classList.remove("card__transition");
+      document
+        .querySelector(".card__title")
+        .classList?.remove("card__transition");
+      document.querySelector(".exercise")?.classList.remove("card__transition");
+      document.querySelector(".deck3")?.classList.remove("deck__transition");
+      // after the transition effect it will set the next card
+      setCard(deck.deal());
+      setDeck(deck);
+    }, 500);
   };
 
-  const quit = () => {
-    // sets a new deck if the user quits to change decks
+  const leave = (route) => {
+    // sets a new deck if the user leaves the game
     const d = new Deck();
     d.shuffle();
     setDeck(d);
-    history.push("/");
-  };
-
-  const complete = () => {
-    // sets a new deck if the user completes workout
-    const d = new Deck();
-    d.shuffle();
-    setDeck(d);
-    history.push("/completed");
+    history.push(`${route}`);
   };
 
   // function to change the exercise and gif depending on the suit
@@ -49,7 +51,7 @@ export default function CardPage({ deck, setDeck, level, setLevel }) {
 
   return (
     <div className="card__page__c">
-      <button className="quit__btn" onClick={quit}>
+      <button className="quit__btn" onClick={() => leave("/")}>
         Quit
       </button>
       <div className="card__title">
@@ -62,17 +64,22 @@ export default function CardPage({ deck, setDeck, level, setLevel }) {
       {deck.cards.length > 0 ? (
         <span>
           <img src={cardBack} className="deck" onClick={draw} />
-          {deck.cards.length > 1 && <img src={cardBack} className="deck2" />}
+          {deck.cards.length > 1 && (
+            <>
+              <img src={cardBack} className="deck2" />
+              <img src={cardBack} className="deck3" />
+            </>
+          )}
         </span>
       ) : (
-        <button className="complete__btn" onClick={complete}>
+        <button className="complete__btn" onClick={() => leave("/completed")}>
           Finish Workout
         </button>
       )}
       <button
         id="instructions"
         className="meet__the__dev"
-        onClick={() => history.push("/instructions")}
+        onClick={() => leave("/instructions")}
       >
         HOW TO PLAY
       </button>
