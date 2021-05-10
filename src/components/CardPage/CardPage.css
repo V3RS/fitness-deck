@@ -7,16 +7,45 @@
   align-items: center;
 }
 
+.quit__btn,
+.complete__btn {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-size: 1.75rem;
+  font-weight: bold;
+  border-radius: 30px;
+  background-color: var(--green);
+  border: none;
+  color: whitesmoke;
+  height: 40px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quit__btn:hover,
+.complete__btn:hover {
+  opacity: 0.8;
+}
+
 .card__title {
   position: absolute;
   top: 5%;
-  font-size: 7rem;
+  font-size: 6rem;
 }
 .cards__left {
   position: absolute;
   /* bottom: 40%; */
   right: 3%;
   font-size: 3.5rem;
+}
+
+.complete__btn {
+  top: 55%;
+  width: 250px;
+  height: 50px;
 }
 
 /* .card__timer {

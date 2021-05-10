@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Main from "./components/Main";
+import CardPage from "./components/CardPage";
 import Splash from "./components/Splash";
 import "./App.css";
 import Deck from "./deck/deck";
@@ -19,7 +19,7 @@ function App() {
           <Splash level={level} setLevel={setLevel} />
         </Route>
         <Route path="/play" exact={true}>
-          <Main
+          <CardPage
             deck={deck}
             setDeck={setDeck}
             level={level}

@@ -35,15 +35,11 @@
   backface-visibility: hidden;
 }
 
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
-}
-
 .flip-card-back {
-  background-color: whitesmoke;
+  background-color: var(--dark);
   transform: rotateY(180deg);
   border-radius: 8px;
+  border: 5px solid var(--green);
 }
 
 .deck__options {
@@ -53,7 +49,7 @@
   border-radius: 30px;
   background-color: var(--green);
   border: none;
-  color: white;
+  color: whitesmoke;
   height: 50px;
   width: 200px;
   display: flex;
