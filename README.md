@@ -11,7 +11,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/V3RS/fitness-deck">
-    <img src="https://musicflix.s3.us-east-2.amazonaws.com/logo.png" alt="Logo" width="180" height="80" style="background-color:white">
+    <img src="https://live.staticflickr.com/65535/51169467971_17008b3e3f_t.jpg" alt="Logo" width="80" height="80" style="background-color:white">
   </a>
 
   <h3 align="center">Fitness Deck</h3>
@@ -19,7 +19,7 @@
   <p align="center">
     Fitness Deck is a unique way to stay active using a deck of playing cards with a modern front-end design using React. The goal is to get through all 52 cards. Each suit is a different exercise and the amount that is given is dependent on the difficulty. 
     <br />
-    <a href="https://github.com/V3RS/musicflix/wiki"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/V3RS/fitness-deck/wiki"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://fit-deck.herokuapp.com/">View Site</a>
@@ -60,7 +60,7 @@
 
 ## About The Project
 
-[Click here to view Musicflix live on the web!](https://fit-deck.herokuapp.com/)
+[Click here to view Fitness Deck live on the web!](https://fit-deck.herokuapp.com/)
 <br>
 </br>
 <img src="https://live.staticflickr.com/65535/51169435056_05167c8a42_k.jpg" alt="homepage ss" />
