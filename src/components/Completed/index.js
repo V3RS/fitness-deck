@@ -28,6 +28,7 @@ export default function Completed({ setLevel, setIsCore }) {
           id="dev__btn__completed"
           className="meet__the__dev"
           target="_blank"
+          rel="noreferrer"
           href="http://vsingh.dev"
         >
           MEET THE DEV

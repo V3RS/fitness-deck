@@ -38,6 +38,8 @@ export const bodyweight = (card) => {
       return { exercise: "Glute Bridges", gif: "/exercises/bridge.gif" };
     case "diamonds":
       return { exercise: "V Ups", gif: "/exercises/v-ups.gif" };
+    default:
+      return {};
   }
 };
 
@@ -58,5 +60,7 @@ export const abs = (card) => {
       };
     case "diamonds":
       return { exercise: "V Ups", gif: "/exercises/v-ups.gif" };
+    default:
+      return {};
   }
 };

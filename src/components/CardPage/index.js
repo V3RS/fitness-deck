@@ -23,23 +23,27 @@ export default function CardPage({ deck, setDeck, level, isCore }) {
         {isCore ? abs(card)?.exercise : bodyweight(card)?.exercise}
       </div>
       <div className="cards__left">Cards Left: {deck.cards.length}</div>
-      <img src={card?.image} className="card" />
       {card && (
-        <img
-          src={isCore ? abs(card)?.gif : bodyweight(card)?.gif}
-          className="exercise"
-        />
+        <>
+          <img src={card?.image} className="card" alt="card" />
+          <img
+            src={isCore ? abs(card)?.gif : bodyweight(card)?.gif}
+            className="exercise"
+            alt="exercise gif"
+          />
+        </>
       )}
       {deck.cards.length > 0 ? (
         <span>
           <img
             src={cardBack}
             className="deck deck__hover"
+            alt="deck"
             onClick={() => draw(setCard, setDeck, deck)}
           />
           {deck.cards.length > 1 && (
             <>
-              <img src={cardBack} className="deck2" />
+              <img alt="deck" src={cardBack} className="deck2" />
             </>
           )}
         </span>
