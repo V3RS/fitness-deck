@@ -115,7 +115,7 @@ Here is everything we need you to do to get started with Fitness Deck.
 
 ### Two different decks with three different difficulties and ease of access to instructions on how to play.
 
-<iframe src="https://giphy.com/embed/nMcClGo9EKFZu3zbGU" alt="gif of decks" />
+<img src="https://media.giphy.com/media/nMcClGo9EKFZu3zbGU/giphy.gif" alt="gif of decks" />
 
 <!-- ### Add a Music Video to your list
 ![My List](site-images/my-list.gif) -->
