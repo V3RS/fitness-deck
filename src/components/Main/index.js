@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./Main.css";
 import cardBack from "../../deck/card-back.png";
-import drawBtn from "./card-draw.svg";
 
-export default function Main({ deck, setDeck }) {
+export default function Main({ deck, setDeck, level, setLevel }) {
   const [card, setCard] = useState(deck[deck.cards.length - 1]);
+
+  console.log(level);
 
   const draw = () => {
     setCard(deck.deal());
@@ -33,7 +34,7 @@ export default function Main({ deck, setDeck }) {
     <div className="card__page__c">
       <div className="card__title">
         {" "}
-        {card?.value} {bodyweight(card)?.exercise}
+        {card && card?.value * level} {bodyweight(card)?.exercise}
       </div>
       <div className="cards__left">Cards Left: {deck.cards.length}</div>
       <img src={card?.image} className="card" />
@@ -44,18 +45,6 @@ export default function Main({ deck, setDeck }) {
           {deck.cards.length > 1 && <img src={cardBack} className="deck2" />}
         </span>
       )}
-
-      {/* <div className="card__timer"> {timer} </div> */}
-
-      <div className="card__page__btns">
-        <img src={drawBtn} className="draw__btn" />
-        <button>
-          <i className="fas fa-play"></i>
-        </button>
-        <button>
-          <i className="fas fa-bars"></i>
-        </button>
-      </div>
     </div>
   );
 }

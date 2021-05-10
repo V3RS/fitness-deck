@@ -45,3 +45,22 @@
   transform: rotateY(180deg);
   border-radius: 8px;
 }
+
+.deck__options {
+  margin-top: 1.5rem;
+  margin-left: 6.5rem;
+  font-size: 1rem;
+  border-radius: 30px;
+  background-color: var(--green);
+  border: none;
+  color: white;
+  height: 50px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.deck__options:hover {
+  opacity: 0.8;
+}
