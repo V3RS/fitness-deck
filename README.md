@@ -50,7 +50,6 @@
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
@@ -116,6 +115,10 @@ Here is everything we need you to do to get started with Fitness Deck.
 ### Two different decks with three different difficulties and ease of access to instructions on how to play.
 
 <img src="https://media.giphy.com/media/nMcClGo9EKFZu3zbGU/giphy.gif" alt="gif of decks" />
+
+### Drawing a card feature with a smooth transition to the next exercise and card.
+
+<img src="https://media.giphy.com/media/wnc1jlFsJOqtrVxZGs/giphy.gif" alt="draw card gif" />
 
 <!-- ### Add a Music Video to your list
 ![My List](site-images/my-list.gif) -->
