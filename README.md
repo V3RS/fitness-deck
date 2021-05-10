@@ -111,11 +111,11 @@ Here is everything we need you to do to get started with Fitness Deck.
 
 <!-- USAGE EXAMPLES -->
 
-<!-- ## Usage  -->
+## Usage  
 
-<!--### An easy-to-use login with a pre-configured Demo User.  -->
+### Two different decks with three different difficulties and ease of access to instructions on how to play.
 
- <!--![demo-login gif](imgs/demo-login.gif)  -->
+<img src="https://giphy.com/embed/nMcClGo9EKFZu3zbGU" alt="gif of decks" />
 
 <!-- ### Add a Music Video to your list
 ![My List](site-images/my-list.gif) -->
