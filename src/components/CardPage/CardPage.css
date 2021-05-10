@@ -15,7 +15,7 @@
   font-size: 1.75rem;
   font-weight: bold;
   border-radius: 30px;
-  background-color: var(--green);
+  background-color: var(--blue);
   border: none;
   color: whitesmoke;
   height: 40px;
@@ -71,7 +71,7 @@
   left: 1%;
   border-radius: 8px;
   transform: scale(0.75);
-  border: 2px solid var(--green);
+  border: 2px solid var(--blue);
   box-shadow: 10px 10px 10px 10px black;
 }
 
@@ -89,7 +89,7 @@
 
 .exercise {
   border-radius: 8px;
-  border: 2px solid var(--green);
+  border: 2px solid var(--blue);
   /* height: 50vh;
   width: 50vw; */
   width: 400px;

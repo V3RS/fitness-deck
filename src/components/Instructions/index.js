@@ -22,7 +22,7 @@ export default function Instructions({ setLevel, setIsCore }) {
           exercise. You can draw cards by clicking the deck in bottom left. Once
           you draw a card it will display a GIF of the exercise and you can get
           started! The goal is to get through all 52 cards! Take rest as needed.
-          To get start hover over the Fitness Deck to the right and select a
+          To get started hover over the Fitness Deck to the right and select a
           deck. Good luck and have a great workout!
         </div>
         <a
